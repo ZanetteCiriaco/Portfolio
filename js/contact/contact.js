@@ -7,9 +7,22 @@ function inputValue(dataInput) {
     return dataInput.value.trim();
 }
 
-function validateEmail(string){
-    var validEmail = /\S+@\S+\.\S+/;
-    return string.search(validEmail) == -1 ? true : false;
+function validateEmail(){
+
+    const isEmptyEmail = validationResult(inputEmail)
+
+    if (isEmptyEmail) {
+        return false
+    } 
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(inputValue(inputEmail))) {
+        return true
+    } else {
+        return false
+    }
+    
 }
 
 function isVoid(dataInput) {
@@ -23,30 +36,44 @@ function setError(field, message) {
     span.innerText= message;
 }
 
-function validationResult(field, textError, textSucess) {
+function validationResult(field) {
     var value = inputValue(field)
 
-    return(isVoid(value) ? setError(field, textError) : setError(field, textSucess))
+    return(isVoid(value))
 }
 
 
 function checkFormInputs() {
 
-    validationResult(inputName, "Campo obrigatório", "");
+    var isValidName = validationResult(inputName);
 
-    validationResult(inputMessage, "Campo obrigatório", "");
-    
-    if(isVoid(inputValue(inputEmail))) {
-        setError(inputEmail, "Campo Obrigatório");
-    } else {
-        validateEmail(inputValue(inputEmail)) ? setError(inputEmail, "Email inválido") : alert("email correto")
+    if (isValidName) {
+        setError(inputName, "Campo obrigatório")
     }
 
-    return false
+    var isValidMessage = validationResult(inputMessage);
+
+    if (isValidMessage) {
+        setError(inputMessage, "Campo obrigatório")
+    }
+
+    var isValidEmail = validateEmail()
+
+    if (!isValidEmail) {
+        setError(inputEmail, "Email inválido")
+        console.log("email invalido")
+    }
+
+    if (isValidEmail && !isValidMessage && !isValidName) {
+        var form = document.getElementById("contact-form")
+        form.submit();
+        alert("Mensagem enviada!")
+    }
+
 }
 
-document.getElementById("form-button").addEventListener("click", function(event){
-    //event.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault();
     checkFormInputs()
 })
 

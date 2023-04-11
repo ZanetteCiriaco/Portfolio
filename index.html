@@ -2,20 +2,40 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Portfolio</title>
+        <title>Portfólio</title>
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
         </style>
+    
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body> 
         <header class="header">
             <nav>
-                <ul>
+                <label class="mobile-menu" for="menu-open"> 
+                    <div class="menu-icon">
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div> 
+                </label>
+                <input class="menu-toggle" type="checkbox" name="menu-open" id="menu-open">
+
+                <div id="link-list-mobile-container">
+                    <ul class="link-list-mobile" id="link-list-mobile">
+                        <li id="link-list-item"><a href="#section-about">Sobre</a></li>
+                        <li id="link-list-item"><a href="#section-experience">Experiências</a></li>
+                        <li id="link-list-item"><a href="#section-projects">Projetos</a></li>
+                        <li id="link-list-item"><a href="#section-contact">Me envie uma mensagem!</a></li>
+                    </ul>
+                </div>
+
+                <ul class="link-list">
                     <li><a href="#section-about">Sobre</a></li>
-                    <li><a href="#section-experience">Experience</a></li>
+                    <li><a href="#section-experience">Experiências</a></li>
                     <li><a href="#section-projects">Projetos</a></li>
                     <li><a href="#section-contact">Me envie uma mensagem!</a></li>
                 </ul>
@@ -32,7 +52,7 @@
                         <div class="about-info">
                             <h2>Zanette Ciríaco</h2>
                             <h3>Frontend Developer & Mobile IOS</h3>
-                            <p>a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>Desenvolvedor IOS e Front-End com um ano de experiência no desenvolvimento de aplicativos de forma nativa com Swift. Durante esse período tive a oportunidade de aprender e de contribuir  no desenvolvimento de aplicações para grandes empresas como: banco BMG e PRAXIS. Estou sempre buscando evoluir e aprender novas tecnologias.</p>
                             <div class="about-social">
                                 <a href="https://www.linkedin.com/in/zanette-cir%C3%ADaco-439712167/" target="_blank">
                                     <div class="social-media-icons">
@@ -44,7 +64,7 @@
                                         <img src="assets/icons/github-icon.png" alt="icon">
                                     </div>
                                 </a>
-                                <a href="google.com" target="_blank">
+                                <a href="https://wa.me/5584994702066" target="_blank">
                                     <div class="social-media-icons">
                                         <img src="assets/icons/whatsapp-icon.png" alt="icon">
                                     </div>
@@ -61,39 +81,32 @@
                     <h2 class="section-title"> Experiências </h2>
 
                     <div class="experience-container">
-                        <div class="experience-text">
-                            <div class="title-block">
-                                <h4 class="experience-title">
-                                    Desenvolvedor IOS Swift
-                                </h4>
-                                <p>Out 2021 - Ago 2022 (11 meses)</p>
-                            </div>
-                            <h5>Liellison Menezes Consultoria em TI</h5>
-                            <p> Trabalhei como instrutor conteudista em frontend na Digital
-                                House, o trabalho consistia em criar conteúdos para as aulas de
-                                especialização frontend. Alguns temas dos conteúdos realizados
-                                foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI,
-                                React Hook Form e styled-components.
-                            </p>
+                        <div class="title-block">
+                            <h4 class="experience-title">
+                                Desenvolvedor IOS Swift
+                            </h4>
+                            <p>Out 2021 - Ago 2022 (11 meses)</p>
                         </div>
+                        <h5>Liellison Menezes Consultoria em TI</h5>
+                        <p> Trabalhei como desenvolvedor IOS Júnior, auxiliando no desenvolvimento de aplicações móveis nativas para o universo Apple.
+                            Fui responsável pelo desenvolvimento de telas em view code e impregando conceitos de auto layout, geração de QRCorde, flow de autenticação, 
+                            consumo de Apis Rest de forma nativa e com alamofire,
+                            implementação de testes unitários e resoluções de bugs.  
+                            Tecnologias utilizadas: Swift, Uikit, alamofire, XCTest, cocoapods, git, github e view code.
+                        </p>
                     </div>
 
                     <div class="experience-container">
-                        <div class="experience-text">
-                            <div class="title-block">
-                                <h4 class="experience-title">
-                                    Desenvolvedor IOS Swift
-                                </h4>
-                                <p>Out 2021 - Ago 2022 (11 meses)</p>
-                            </div>
-                            <h5>Liellison Menezes Consultoria em TI</h5>
-                            <p> Trabalhei como instrutor conteudista em frontend na Digital
-                                House, o trabalho consistia em criar conteúdos para as aulas de
-                                especialização frontend. Alguns temas dos conteúdos realizados
-                                foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI,
-                                React Hook Form e styled-components.
-                            </p>
+                        <div class="title-block">
+                            <h4 class="experience-title">
+                                Programador Web - Estágio
+                            </h4>
+                            <p>Ago 2020 - Dez 2020 (5 meses)</p>
                         </div>
+                        <h5>Grupo de Ciência e Tecnologia da Informação</h5>
+                        <p> Trabalhei como programador Fullstack. Fui responsável por desenvolver e dar manutenção em sites e portais. 
+                            As tecnologias utilizadas foram: Angular, HTML, CSS, TypeScript, Bootstrap, Spring Boot e PostgreSQL.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -104,29 +117,29 @@
 
                     <div class="projects-container">
                         <div class="projects-card">
-                            <h3>TeslaBank</h3>
+                            <h3>Pokédex React</h3>
                             <p>
-                                Site institucional de banco digital, feito em HTML, Sass e JavaScript.
+                                Pokedéx construida em Reactjs para fins de estudo.
                             </p>
-                            <a href="#" target="_blank">Link</a>
+                            <a href="https://github.com/ZanetteCiriaco/pokedex-react" target="_blank">Link</a>
                         </div>
                         <div class="projects-card">
-                            <h3>TeslaBank</h3>
+                            <h3>Desafio XDS Food</h3>
                             <p>
-                                Site institucional de banco digital, feito em HTML, Sass e JavaScript. fdsfsd fsdfsdfsd sd dsfsdfssdfsdfsdfsd f dfsdfs fsdfdsfsdf  sdfs
+                                Desafio para criar uma aplicativo para uma pizzaria fictícia
                             </p>
-                            <a href="#" target="_blank">Link</a>
+                            <a href="https://github.com/ZanetteCiriaco/XDS-Desafio-IOS" target="_blank">Link</a>
                         </div>
                         <div class="projects-card">
-                            <h3>TeslaBank</h3>
+                            <h3>Desafio Globoplay</h3>
                             <p>
-                                Site institucional de banco digital, feito em HTML, Sass e JavaScript. dasdas dasdsa
+                                Desafio para criar um aplicativo de stream de vídeos com theMovieApi.
                             </p>
-                            <a href="#" target="_blank">Link</a>
+                            <a href="https://github.com/ZanetteCiriaco/Globoplay-ios" target="_blank">Link</a>
                         </div>
                     </div>
 
-                    <a href="#" target="_blank">Repositórios no GitHub</a>
+                    <a href="https://github.com/ZanetteCiriaco?tab=repositories" target="_blank">Repositórios no GitHub</a>
                 </div>
             </section>
 
@@ -135,8 +148,9 @@
                     <h2 class="section-title"> Me envie uma mensagem! </h2>
                 
                     <div class="form-container">
-                        <form action="https://api.staticforms.xyz/submit" method="post" >
+                        <form action="https://api.staticforms.xyz/submit" method="post" id="contact-form" >
                             <input type="hidden" name="accessKey" value="04091114-caca-4198-95a3-e3f0de793251">
+                            <input type="hidden" name="redirectTo" value="http://portfolio-zanette-ciriaco.000webhostapp.com/#section-contact">
 
                             <div class="form-field">
                                 <label for="name"> Nome </label>
@@ -155,7 +169,6 @@
                                 <input 
                                     type="email" 
                                     id="input-email"  
-                                    required 
                                     maxlength="300"
                                     name="email"
                                     placeholder="email@example.com"
@@ -166,13 +179,12 @@
                                 <label for="message"> Mensagem </label>
                                 <textarea 
                                     id="textarea-message"  
-                                    required 
                                     maxlength="100"
                                     name="message"> 
                                 </textarea>
                                 <span class="error-message"></span>
                             </div>
-                            <button type="submit" id="form-button" onclick="Enviar()">Enviar</button>
+                            <button type="submit" id="form-button">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -180,8 +192,11 @@
                 
             </section>
         </main>
-        <footer> footer</footer>
+        <footer> 
+            Zanette Ciríaco 2023
+        </footer>
 
-        <!--<script src="js/contact/contact.js"></script>-->
+        <script src="js/header/header.js"></script>
+        <script src="js/contact/contact.js"></script>
     </body>
 </html>

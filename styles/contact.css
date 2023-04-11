@@ -26,6 +26,10 @@ form label {
     outline: none;
 }
 
+.form-field span {
+    color: white;
+}
+
 form input {
     height: 40px;
     border-radius: 4px;

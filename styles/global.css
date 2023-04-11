@@ -7,16 +7,17 @@
 
     --gray-300: #d8d8d8;
 }
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: "Archivo";
 }
 
 body {
     background-color: var(--black-800);
     color: white;
+    font-family: "Archivo";
 }
 
 a {

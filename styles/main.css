@@ -17,20 +17,7 @@ section {
   max-width: 1240px;
 }
 
-footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
-
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%
-}
-
-
-@media (max-width: 768px) {
-  html {
-    font-size: 50%;
-  }
+  font-size: 62.5%;
 }
