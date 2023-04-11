@@ -1,0 +1,36 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: var(--black-700);
+    border-bottom: 1px solid var(--black-600);
+    margin-bottom: 64px;
+}
+
+header nav {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+    border-bottom: 2px auto white;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav li a {
+    color: #fff;
+    font-size: 1.8rem;
+}

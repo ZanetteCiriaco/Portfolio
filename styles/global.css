@@ -1,0 +1,24 @@
+:root {
+    --black-600: #101013;
+    --black-700: #09090b;
+    --black-800: #040405;
+
+    --blue-300: #00a3ff;
+
+    --gray-300: #d8d8d8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo";
+}
+
+body {
+    background-color: var(--black-800);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}

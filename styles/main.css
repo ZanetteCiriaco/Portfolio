@@ -1,0 +1,36 @@
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+
+.section-container {
+  display: grid;
+  padding: 100px 40px;
+  gap: 40px;
+  max-width: 1240px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%
+}
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}

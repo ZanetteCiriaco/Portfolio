@@ -1,0 +1,43 @@
+.experience-container {
+    background-color: var(--black-700);
+    border: 2px solid var(--black-600);
+}
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.title-block .experience-title {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.title-block p {
+    font-size: 2rem;  
+    font-weight: 400;
+}
+
+.experience-text h5 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 32px 0px;
+    color: var(--blue-300);
+}
+
+.experience-text p {
+    font-size: 2rem;
+    line-height: 160%;
+    font-weight: 400;
+    color: var(--gray-300);
+}
+
